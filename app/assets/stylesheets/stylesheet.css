@@ -1,0 +1,141 @@
+.header {
+	min-height: 50px;
+	background-color: black;
+	width: 100%;
+}
+
+.mainbox {
+	maxwidth: 100%;
+	padding-left: 25px;
+	overflow: scroll;
+
+}
+
+.imgbox {
+	max-height: 250px;
+	display: inline-block;
+	float: left;
+	margin: 10px;
+	border: 10px solid black;
+	margin-top: 50px;
+	position: relative;
+
+}
+
+.maintitle {
+	padding-top: 10px;
+	padding-left: 14px;
+
+}
+
+.currentpagetitle {
+	height:35px;
+	width:100px;
+	position: absolute;
+	margin-top: 7px;
+	margin-left: 10px;
+	background-color: #000000;
+	-webkit-transition:background-color 1.50s ease;
+	-moz-transition:background-color 1.50s ease;
+	-o-transition:background-color 1.50s ease;
+	-ms-transition:background-color 1.50s ease;
+	transition:background-color 1.50s ease;
+}
+
+.currentpagetitle:hover {
+	cursor: pointer;
+	background-color: #333333;
+}
+
+img {
+	max-width: 100%;
+	max-height: 92%;
+
+}
+
+.list1, .list2 {
+	z-index: -1;
+	position: absolute;
+	max-width: 100%;
+	margin-left: -10px;
+	margin-right: 10%;
+
+	font-family: sans-serif;
+	color: black;
+	  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+    -webkit-animation-duration: 0.5s;
+}
+
+.list1 {
+	margin-top: 180px;
+
+}
+
+.list2 {
+	margin-top: 200px; 
+
+}
+
+.imgbox:hover .list1{
+	 -webkit-transform: translateY(70px);
+    transform: translateY(70px);
+	display: inline;
+	-webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+  -webkit-animation-duration: 0.5s;
+}
+
+.imgbox:hover .list2{
+	 -webkit-transform: translateY(70px);
+    transform: translateY(70px);
+	display: inline;
+	-webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+  -webkit-animation-duration: 0.5s;
+}
+
+/*ANIMATION DEFINITIONS*/
+
+@-webkit-keyframes slideInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+
+  100% {
+    -webkit-transform: translateY(70px);
+    transform: translateY(70px);
+  }
+}
+
+
+
+@-webkit-keyframes slideInUp {
+  0% {
+    -webkit-transform: translateY(70px);
+    transform: translateY(70px);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

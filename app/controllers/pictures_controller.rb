@@ -15,6 +15,7 @@ class PicturesController < ApplicationController
 
   def create
   	@picture = Picture.new(picture_params)
+  	@picture.assign_attributes({ :title => picture_params[:title].upcase})
   	if @picture.save
   		redirect_to pictures_url
   	else

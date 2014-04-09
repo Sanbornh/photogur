@@ -1,7 +1,17 @@
-<h1>PICTURES<h1>
-<%= link_to "New Picture", "/pictures/new" %>
+<%content_for :header do %>
+	<h1 class="maintitle">PICTURES<h1>
+<% end %>
 
-<% @pictures.each do |picture| %>
-	<p><%= picture[:title] %>, <%= picture[:artist] %></p>
-	<%= link_to image_tag(picture.url), "/pictures/#{picture.id}" %>
+
+
+<%= link_to "New Picture", "/pictures/new" %>
+	<%content_for :mainbox do %>
+	<% @pictures.each do |picture| %>
+		<div class="imgbox">
+			<ul>
+				<li class="list1"><%= picture[:title] %></li>
+				<li class="list2"><%= picture[:artist] %></li>
+			</ul><%= link_to image_tag(picture.url), "/pictures/#{picture.id}" %>
+		</div>
+	<% end %>
 <% end %>
